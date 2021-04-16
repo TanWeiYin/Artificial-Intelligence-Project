@@ -92,35 +92,24 @@ Source of dataset: https://www.kaggle.com/meowmeowmeowmeowmeow/gtsrb-german-traf
 ## D.   PROJECT STRUCTURE
 
 The following directory is our structure of our project:
--$ tree --dirsfirst --filelimit 10
--.
--├── examples [25 entries]
--├── gtsrb-german-traffic-sign
--│   ├── Meta [43 entries]
--│   ├── Test [12631 entries]
--│   ├── Train [43 entries]
--│   ├── meta-1 [43 entries]
--│   ├── test-1 [12631 entries]
--│   ├── train-1 [43 entries]
--│   ├── Meta.csv
--│   ├── Test.csv
--│   └── Train.csv
--├── output
--│   ├── trafficsignnet.model
--│   │   ├── assets
--│   │   ├── variables
--│   │   │   ├── variables.data-00000-of-00002
--│   │   │   ├── variables.data-00001-of-00002
--│   │   │   └── variables.index
--│   │   └── saved_model.pb
--│   └── plot.png
--├── pyimagesearch
--│   ├── __init__.py
--│   └── trafficsignnet.py
--├── train.py
--├── signnames.csv
--└── predict.py
--13 directories, 13 files
+- $ tree --dirsfirst --filelimit 10
+- .
+- ├── dataset
+- │   ├── with_mask [690 entries]
+- │   └── without_mask [686 entries]
+- ├── examples
+- │   ├── example_01.png
+- │   ├── example_02.png
+- │   └── example_03.png
+- ├── face_detector
+- │   ├── deploy.prototxt
+- │   └── res10_300x300_ssd_iter_140000.caffemodel
+- ├── detect_mask_image.py
+- ├── detect_mask_video.py
+- ├── mask_detector.model
+- ├── plot.png
+- └── train_mask_detector.py
+- 5 directories, 10 files
 
 
 Our project contains three main directories and one Python module:

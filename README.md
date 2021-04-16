@@ -378,7 +378,7 @@ What I have Covered in this video
 - Live implementation and testing
 - Implement Deep Learning in Real-time Application
 
-[![Figure7](https://i.ytimg.com/an_webp/qahpZkPlTRM/mqdefault_6s.webp?du=3000&sqp=CM_S5IMG&rs=AOn4CLC8nmrmepfjbZNqtZn8rdaW3VQRMA)](https://www.youtube.com/watch?v=qahpZkPlTRM&ab_channel=MachineLearningHub "Figure7")
+[![Figure7](https://www.youtube.com/watch?v=qahpZkPlTRM)](https://www.youtube.com/watch?v=qahpZkPlTRM&ab_channel=MachineLearningHub "Figure7")
 
 
 

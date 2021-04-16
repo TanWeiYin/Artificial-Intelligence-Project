@@ -342,6 +342,7 @@ Open up a terminal and execute the following command:
 |Roundabout mandatory|0.90|0.99|0.94|90|
 |End of no passing|0.90|1.00|0.94|60|
 |End no passing veh > 3.5 tons|0.91|0.89|0.90|90|
+| | | | | |
 |accuracy| | |0.95|12630|
 |macro avg|0.92|0.93|0.92|12630|
 |weighted avg|0.95|0.95|0.95|12630|

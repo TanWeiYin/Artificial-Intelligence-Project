@@ -47,6 +47,7 @@ When I returned from visiting my parents I decided it would be fun (and educatio
 
 
 ![Coding](https://pyimagesearch.com/wp-content/uploads/2019/11/traffic_sign_recognition_header.jpg)
+
 Figure 1 shows the AI output of detecting traffic sign on the road and classifying them .
 
 
@@ -69,6 +70,7 @@ We’ll wrap up the post by looking at the results of applying our traffic sign 
 There is two-phase traffic signs detector as shown in Figure 2:
 
 ![Figure 2](https://pyimagesearch.com/wp-content/uploads/2019/11/traffic_sign_classification_phases.jpg)
+
 Figure 2: Phases and individual steps for building a traffic signs detector with computer vision and deep learning 
 
 
@@ -375,3 +377,7 @@ What I have Covered in this video
 - Implement Deep Learning in Real-time Application
 
 [![demo](https://www.youtube.com/watch?v=qahpZkPlTRM&ab_channel=MachineLearningHub "demo")
+
+
+
+

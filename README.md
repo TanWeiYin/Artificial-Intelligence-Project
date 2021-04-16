@@ -362,7 +362,7 @@ Train and classify Traffic Signs using Convolutional neural networks This will b
 
 By the end of the video  I be will sharing information that will help you classify your own data set. Info such as  how long does it take to train and how much data of each class is required to have a good classification model. 
 
-[![Figure6](https://i.ytimg.com/an_webp/SWaYRyi0TTs/mqdefault_6s.webp?du=3000&sqp=CITp5IMG&rs=AOn4CLCSrSP-mHWYURZv5_q8v1dUwbSrag)](https://www.youtube.com/watch?v=SWaYRyi0TTs&ab_channel=Murtaza%27sWorkshop-RoboticsandAI "Figure6")
+[![Figure6](https://img.youtube.com/vi/SWaYRyi0TTs/0.jpg)](https://www.youtube.com/watch?v=SWaYRyi0TTs&ab_channel=Murtaza%27sWorkshop-RoboticsandAI "Figure6")
 
 Figure 5: Traffic Signs Classification in real-time video streams
 
@@ -378,7 +378,7 @@ What I have Covered in this video
 - Live implementation and testing
 - Implement Deep Learning in Real-time Application
 
-[![Figure7](https://www.youtube.com/watch?v=qahpZkPlTRM)](https://www.youtube.com/watch?v=qahpZkPlTRM&ab_channel=MachineLearningHub "Figure7")
+[![Figure7](https://img.youtube.com/vi/qahpZkPlTRM/0.jpg)](https://www.youtube.com/watch?v=qahpZkPlTRM&ab_channel=MachineLearningHub "Figure7")
 
 
 

@@ -213,31 +213,31 @@ Dropout is applied as a form of regularization which aims to prevent overfitting
 
 Now that our TrafficSignNet architecture has been implemented, let’s create our Python training script that will be responsible for:
 
--Loading our training and testing split from the GTSRB dataset
--Preprocessing the images
--Training our model
--Evaluating our model’s accuracy
--Serializing the model to disk so we can later use it to make predictions on new traffic sign data
+- Loading our training and testing split from the GTSRB dataset
+- Preprocessing the images
+- Training our model
+- Evaluating our model’s accuracy
+- Serializing the model to disk so we can later use it to make predictions on new traffic sign data
 
 open up the train.py file in your project directory and add the following code:
 
--# set the matplotlib backend so figures can be saved in the background
--import matplotlib
--matplotlib.use("Agg")
--# import the necessary packages
--from pyimagesearch.trafficsignnet import TrafficSignNet
--from tensorflow.keras.preprocessing.image import ImageDataGenerator
--from tensorflow.keras.optimizers import Adam
--from tensorflow.keras.utils import to_categorical
--from sklearn.metrics import classification_report
--from skimage import transform
--from skimage import exposure
--from skimage import io
--import matplotlib.pyplot as plt
--import numpy as np
--import argparse
--import random
--import os
+- # set the matplotlib backend so figures can be saved in the background
+- import matplotlib
+- matplotlib.use("Agg")
+- # import the necessary packages
+- from pyimagesearch.trafficsignnet import TrafficSignNet
+- from tensorflow.keras.preprocessing.image import ImageDataGenerator
+- from tensorflow.keras.optimizers import Adam
+- from tensorflow.keras.utils import to_categorical
+- from sklearn.metrics import classification_report
+- from skimage import transform
+- from skimage import exposure
+- from skimage import io
+- import matplotlib.pyplot as plt
+- import numpy as np
+- import argparse
+- import random
+- import os
 
 define a function to load our data from disk:
 
@@ -269,33 +269,33 @@ loop over the rows  now and extract + preprocess the data that we need:
 
 Open up a terminal and execute the following command:
 
--$ python train.py --dataset gtsrb-german-traffic-sign \
--	--model output/trafficsignnet.model --plot output/plot.png
--[INFO] loading training and testing data...
--[INFO] compiling model...
--[INFO] training network...
--Epoch 1/30
--612/612 [==============================] - 49s 81ms/step - loss: 2.6584 - accuracy: 0.2951 - val_loss: 2.1152 - val_accuracy: 0.3513
--Epoch 2/30
--612/612 [==============================] - 47s 77ms/step - loss: 1.3989 - accuracy: 0.5558 - val_loss: 0.7909 - val_accuracy: 0.7417
--Epoch 3/30
--612/612 [==============================] - 48s 78ms/step - loss: 0.9402 - accuracy: 0.6989 - val_loss: 0.5147 - val_accuracy: 0.8302
--Epoch 4/30
--612/612 [==============================] - 47s 76ms/step - loss: 0.6940 - accuracy: 0.7759 - val_loss: 0.4559 - val_accuracy: 0.8515
--Epoch 5/30
--612/612 [==============================] - 47s 76ms/step - loss: 0.5521 - accuracy: 0.8219 - val_loss: 0.3004 - val_accuracy: 0.9055
--...
--Epoch 26/30
--612/612 [==============================] - 46s 75ms/step - loss: 0.1213 - accuracy: 0.9627 - val_loss: 0.7386 - val_accuracy: 0.8274
--Epoch 27/30
--612/612 [==============================] - 46s 75ms/step - loss: 0.1175 - accuracy: 0.9633 - val_loss: 0.1931 - val_accuracy: 0.9505
--Epoch 28/30
--612/612 [==============================] - 46s 75ms/step - loss: 0.1101 - accuracy: 0.9664 - val_loss: 0.1553 - val_accuracy: 0.9575
--Epoch 29/30
--612/612 [==============================] - 46s 76ms/step - loss: 0.1098 - accuracy: 0.9662 - val_loss: 0.1642 - val_accuracy: 0.9581
--Epoch 30/30
--612/612 [==============================] - 47s 76ms/step - loss: 0.1063 - accuracy: 0.9684 - val_loss: 0.1778 - val_accuracy: 0.9495
--[INFO] evaluating network...
+- $ python train.py --dataset gtsrb-german-traffic-sign \
+- 	--model output/trafficsignnet.model --plot output/plot.png
+- [INFO] loading training and testing data...
+- [INFO] compiling model...
+- [INFO] training network...
+- Epoch 1/30
+- 612/612 [==============================] - 49s 81ms/step - loss: 2.6584 - accuracy: 0.2951 - val_loss: 2.1152 - val_accuracy: 0.3513
+- Epoch 2/30
+- 612/612 [==============================] - 47s 77ms/step - loss: 1.3989 - accuracy: 0.5558 - val_loss: 0.7909 - val_accuracy: 0.7417
+- Epoch 3/30
+- 612/612 [==============================] - 48s 78ms/step - loss: 0.9402 - accuracy: 0.6989 - val_loss: 0.5147 - val_accuracy: 0.8302
+- Epoch 4/30
+- 612/612 [==============================] - 47s 76ms/step - loss: 0.6940 - accuracy: 0.7759 - val_loss: 0.4559 - val_accuracy: 0.8515
+- Epoch 5/30
+- 612/612 [==============================] - 47s 76ms/step - loss: 0.5521 - accuracy: 0.8219 - val_loss: 0.3004 - val_accuracy: 0.9055
+- ...
+- Epoch 26/30
+- 612/612 [==============================] - 46s 75ms/step - loss: 0.1213 - accuracy: 0.9627 - val_loss: 0.7386 - val_accuracy: 0.8274
+- Epoch 27/30
+- 612/612 [==============================] - 46s 75ms/step - loss: 0.1175 - accuracy: 0.9633 - val_loss: 0.1931 - val_accuracy: 0.9505
+- Epoch 28/30
+- 612/612 [==============================] - 46s 75ms/step - loss: 0.1101 - accuracy: 0.9664 - val_loss: 0.1553 - val_accuracy: 0.9575
+- Epoch 29/30
+- 612/612 [==============================] - 46s 76ms/step - loss: 0.1098 - accuracy: 0.9662 - val_loss: 0.1642 - val_accuracy: 0.9581
+- Epoch 30/30
+- 612/612 [==============================] - 47s 76ms/step - loss: 0.1063 - accuracy: 0.9684 - val_loss: 0.1778 - val_accuracy: 0.9495
+- [INFO] evaluating network...
 |      |    precision    | recall| f1-score | support |
 |------|-----------------|-------|----------|---------|
 |Speed limit (20km/h)|0.94|0.98|0.96|60|
@@ -344,7 +344,7 @@ Open up a terminal and execute the following command:
 |accuracy| | |0.95|12630|
 |macro avg|0.92|0.93|0.92|12630|
 |weighted avg|0.95|0.95|0.95|12630|
--[INFO] serializing network to 'output/trafficsignnet.model'...
+- [INFO] serializing network to 'output/trafficsignnet.model'...
 
 
 ![Figure 5](https://pyimagesearch.com/wp-content/uploads/2019/11/plot.png)

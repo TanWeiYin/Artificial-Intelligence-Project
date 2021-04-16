@@ -318,7 +318,7 @@ Open up a terminal and execute the following command:
 |Veh > 3.5 tons prohibited|0.97|0.99|0.98|150|
 |No entry|1.00|0.94|0.97|360|
 |General caution|0.98|0.77|0.86|390|
-|Dangerous curve left|0.75|0.60|0.660|
+|Dangerous curve left|0.75|0.60|0.67|0.60|
 |Dangerous curve right|0.69|1.00|0.81|90|
 |Double curve|0.76|0.80|0.78|90|
 |Bumpy road|0.99|0.78|0.87|120|

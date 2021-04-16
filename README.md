@@ -221,49 +221,49 @@ Now that our TrafficSignNet architecture has been implemented, let’s create ou
 
 open up the train.py file in your project directory and add the following code:
 
-- \# set the matplotlib backend so figures can be saved in the background
-- import matplotlib
-- matplotlib.use("Agg")
-- \# import the necessary packages
-- from pyimagesearch.trafficsignnet import TrafficSignNet
-- from tensorflow.keras.preprocessing.image import ImageDataGenerator
-- from tensorflow.keras.optimizers import Adam
-- from tensorflow.keras.utils import to_categorical
-- from sklearn.metrics import classification_report
-- from skimage import transform
-- from skimage import exposure
-- from skimage import io
-- import matplotlib.pyplot as plt
-- import numpy as np
-- import argparse
-- import random
-- import os
+-		\# set the matplotlib backend so figures can be saved in the background
+- 		import matplotlib
+- 		matplotlib.use("Agg")
+- 		\# import the necessary packages
+-		from pyimagesearch.trafficsignnet import TrafficSignNet
+- 		from tensorflow.keras.preprocessing.image import ImageDataGenerator
+- 		from tensorflow.keras.optimizers import Adam
+- 		from tensorflow.keras.utils import to_categorical
+- 		from sklearn.metrics import classification_report
+- 		from skimage import transform
+- 		from skimage import exposure
+- 		from skimage import io
+- 		import matplotlib.pyplot as plt
+- 		import numpy as np
+- 		import argparse
+- 		import random
+- 		import os
 
 define a function to load our data from disk:
 
-- def load_split(basePath, csvPath):
--	\# initialize the list of data and labels
--	data = []
--	labels = []
--	# load the contents of the CSV file, remove the first line (since
--	# it contains the CSV header), and shuffle the rows (otherwise
--	# all examples of a particular class will be in sequential order)
--	rows = open(csvPath).read().strip().split("\n")[1:]
--	random.shuffle(rows)
+- 		def load_split(basePath, csvPath):
+-			\# initialize the list of data and labels
+-			data = []
+-			labels = []
+-			\# load the contents of the CSV file, remove the first line (since
+-			\# it contains the CSV header), and shuffle the rows (otherwise
+-			\# all examples of a particular class will be in sequential order)
+-			rows = open(csvPath).read().strip().split("\n")[1:]
+-			random.shuffle(rows)
 
 loop over the rows  now and extract + preprocess the data that we need:
 
--	\# loop over the rows of the CSV file
--	for (i, row) in enumerate(rows):
--		\# check to see if we should show a status update
--		if i > 0 and i % 1000 == 0:
--			print("[INFO] processed {} total images".format(i))
--		\# split the row into components and then grab the class ID
--		\# and image path
--		(label, imagePath) = row.strip().split(",")[-2:]
--		\# derive the full path to the image file and load it
--		imagePath = os.path.sep.join([basePath, imagePath])
--		image = io.imread(imagePath)
+-			\# loop over the rows of the CSV file
+-			for (i, row) in enumerate(rows):
+-				\# check to see if we should show a status update
+-				if i > 0 and i % 1000 == 0:
+-					print("[INFO] processed {} total images".format(i))
+-				\# split the row into components and then grab the class ID
+-				\# and image path
+-				(label, imagePath) = row.strip().split(",")[-2:]
+-				\# derive the full path to the image file and load it
+-				imagePath = os.path.sep.join([basePath, imagePath])
+-				image = io.imread(imagePath)
 
 ## G.  Training TrafficSignNet on the traffic sign dataset
 
@@ -296,6 +296,7 @@ Open up a terminal and execute the following command:
 - Epoch 30/30
 - 612/612 [==============================] - 47s 76ms/step - loss: 0.1063 - accuracy: 0.9684 - val_loss: 0.1778 - val_accuracy: 0.9495
 - [INFO] evaluating network...
+
 |      |    precision    | recall| f1-score | support |
 |------|-----------------|-------|----------|---------|
 |Speed limit (20km/h)|0.94|0.98|0.96|60|

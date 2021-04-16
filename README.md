@@ -5,10 +5,7 @@
 **Project Title:** Face Mask Detection using Deep Learning
 
 **Team Members:** 
-- [insert Member Name]
-- [insert Member Name]
-- [insert Member Name]
-- [insert Member Name]
+- Tan Wei Yin (B032020029)
 
 
 - [ ] **Objectives:**
@@ -379,7 +376,4 @@ What I have Covered in this video
 - Implement Deep Learning in Real-time Application
 
 [![Figure7](https://img.youtube.com/vi/qahpZkPlTRM/0.jpg)](https://www.youtube.com/watch?v=qahpZkPlTRM&ab_channel=MachineLearningHub "Figure7")
-
-
-
 

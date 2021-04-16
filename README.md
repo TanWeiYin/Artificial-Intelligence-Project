@@ -221,10 +221,10 @@ Now that our TrafficSignNet architecture has been implemented, let’s create ou
 
 open up the train.py file in your project directory and add the following code:
 
-- # set the matplotlib backend so figures can be saved in the background
+- \# set the matplotlib backend so figures can be saved in the background
 - import matplotlib
 - matplotlib.use("Agg")
-- # import the necessary packages
+- \# import the necessary packages
 - from pyimagesearch.trafficsignnet import TrafficSignNet
 - from tensorflow.keras.preprocessing.image import ImageDataGenerator
 - from tensorflow.keras.optimizers import Adam
@@ -253,15 +253,15 @@ define a function to load our data from disk:
 
 loop over the rows  now and extract + preprocess the data that we need:
 
--	# loop over the rows of the CSV file
+-	\# loop over the rows of the CSV file
 -	for (i, row) in enumerate(rows):
--		# check to see if we should show a status update
+-		\# check to see if we should show a status update
 -		if i > 0 and i % 1000 == 0:
 -			print("[INFO] processed {} total images".format(i))
--		# split the row into components and then grab the class ID
--		# and image path
+-		\# split the row into components and then grab the class ID
+-		\# and image path
 -		(label, imagePath) = row.strip().split(",")[-2:]
--		# derive the full path to the image file and load it
+-		\# derive the full path to the image file and load it
 -		imagePath = os.path.sep.join([basePath, imagePath])
 -		image = io.imread(imagePath)
 

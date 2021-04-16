@@ -241,7 +241,7 @@ open up the train.py file in your project directory and add the following code:
 
 define a function to load our data from disk:
 
--def load_split(basePath, csvPath):
+- def load_split(basePath, csvPath):
 -	# initialize the list of data and labels
 -	data = []
 -	labels = []
